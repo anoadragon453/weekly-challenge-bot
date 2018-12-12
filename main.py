@@ -27,6 +27,7 @@ async def on_ready():
 
     for submission in reddit.subreddit('mlpdrawingschool').stream.submissions(skip_existing=True):
         if re.match("\[Weekly Challenge\] .*", submission.title):
+            print("Posting:", submission.title)
             post_text = ("# Hey bois n girls, it's time for a new weekly challenge!\n\n" +
                         submission.selftext + "\n\nLink: " + 
                         "https://reddit.com" + submission.permalink)
@@ -36,7 +37,6 @@ async def on_ready():
             posts = [post_text[i:i+n] for i in range(0, len(post_text), n)]
 
             for post in posts:
-                print(len(post))
                 for channel in channels:
                     await client.send_message(channel, post_text)
 
