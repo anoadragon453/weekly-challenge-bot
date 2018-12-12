@@ -28,7 +28,7 @@ async def on_ready():
     for submission in reddit.subreddit('mlpdrawingschool').stream.submissions(skip_existing=True):
         if re.match("\[Weekly Challenge\] .*", submission.title):
             print("Posting:", submission.title)
-            post_text = ("# Hey bois n girls, it's time for a new weekly challenge!\n\n" +
+            post_text = ("**Hey bois n girls, it's time for a new weekly challenge!**\n\n" +
                         submission.selftext + "\n\nLink: " + 
                         "https://reddit.com" + submission.permalink)
 
