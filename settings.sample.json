@@ -1,0 +1,8 @@
+{
+  "reddit_client_id": "",
+  "reddit_client_secret": "",
+  "reddit_user_agent": "",
+  "matrix_hs_url": "http://127.0.0.1:8080",
+  "matrix_username": "",
+  "matrix_password": ""
+}

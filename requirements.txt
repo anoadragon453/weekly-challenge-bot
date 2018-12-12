@@ -1,0 +1,2 @@
+praw>=6.0.0
+matrix_client=0.3.2
